@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  news_notify:
+    # image: node:10.16.0-alpine
+    build: .
+    container_name: news_notify
+    working_dir: /usr/src/app/news_notify
+    environment:
+      TZ: "Asia/Bangkok"
+      NODE_ENV: development
+      # NODE_ENV: production
+    volumes:
+      - ./app/:/usr/src/app/news_notify
+    # ports:
+    #   - 3000:3000
+    command: >
+      sh -c "npm start"
+    # tty: true
+    restart: always

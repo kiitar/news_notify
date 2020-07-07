@@ -1,0 +1,21 @@
+{
+  "name": "news_notify",
+  "version": "1.0.0",
+  "description": "Notify news to Line every hours",
+  "main": "index.js",
+  "scripts": {
+    "start": "if [[ \"${NODE_ENV}\" == \"production\" ]]; then node index.js; else node index.js; fi"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "line-api": "^0.1.4",
+    "moment": "^2.26.0",
+    "nightmare": "^3.0.1",
+    "node-cron": "^2.0.3",
+    "vo": "^4.0.2",
+    "xvfb": "^0.3.0"
+  }
+}
